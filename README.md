@@ -55,4 +55,5 @@ Simple R script that makes a chart with the density of CpG dinucleotides.
 
 Typical output chart:
 
-![Rplot05](https://user-images.githubusercontent.com/9166776/157063306-045db4a0-955a-482d-acc7-f10c94419415.png)
+![Rplot](https://user-images.githubusercontent.com/9166776/157075731-0debf368-f4fa-491b-b097-a37f11c9cce6.png)
+
