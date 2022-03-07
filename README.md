@@ -27,3 +27,7 @@ install.packages("BiocManager")
 BiocManager::install("HilbertCurve")
 BiocManager::install("IRanges")
 ```
+## CpG-to-CpG-distances.R
+
+Simple R script that makes a chart with distances calculated between CpG dinucleotides.
+* The input FASTA file (DNA) should be not-aligned, without gaps and special symbols. A sample of an input file containt the H1N1 IAV PR8 strain sequence is provided ("PR8.fas").
