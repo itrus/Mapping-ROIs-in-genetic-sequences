@@ -11,10 +11,10 @@ for (CurrentSeq in 1:seq$nb) {
   data2<-words.pos("cg", seq$seq[[CurrentSeq]])
   data3<-NULL
   for (i in 2:length(data2)) data3<-c(data3,data2[i]-data2[i-1]-2)
-  hist(data3, las=1, breaks=10, xlim=c(1,140), col="red",
-       main=paste(seq$nam[[CurrentSeq]],",",length(data2),"CpGs per",round(length(s2c(seq$seq[[CurrentSeq]]))/1000,1),"kb, M±SD=",
-       round(mean(data3),1),"±", round(sd(data3),1)),
-       xlab="CpG to CpG distance, nt", ylim=c(0,42))
+  hist(data3, las=1, breaks=10, col="red",
+       main=paste(seq$nam[[CurrentSeq]],",",length(data2),"CpGs per",round(length(s2c(seq$seq[[CurrentSeq]]))/1000,1),"kb, MÂ±SD=",
+       round(mean(data3),1),"Â±", round(sd(data3),1)),
+       xlab="CpG to CpG distance, nt")
   write.xlsx(data3, "distances.xlsx", sheetName=seq$nam[CurrentSeq], append = T, col.names = F, row.names = F)
 }
 
