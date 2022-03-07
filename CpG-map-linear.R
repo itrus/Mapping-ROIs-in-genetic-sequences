@@ -24,8 +24,8 @@ for (i in 1:seq$nb) {
     if ((cpg_matrix[i,k])==1) cpg_matrix2[i,k:(k+frame)]<-cpg_matrix2[i,k:(k+frame)]+1
   }
 }
-matplot(t(cpg_matrix2/10), type='o', ylim=c(0,2), xlab='Position', ylab=paste("CpG sites per",frame/10,"nt", sep=" "), pch=15:19)
-legend("topright", inset=0.01, legend=seq$nam, col=c(1:6), pch=15:19, bg= ("white"))
+matplot(t(cpg_matrix2[1:8,]/10), type='l', ylim=c(0,max(cpg_matrix2)/10), xlab='Position', ylab=paste("CpG sites per",frame/10,"nt", sep=" "), pch=50, col =c(1:8))
+legend("topright", legend=seq$nam[1:8], col=c(1:8), pch=45:45, bg=("white"))
 
 # exporting to excel file
 write.xlsx(t(cpg_matrix), "positions.xlsx", append = T, col.names = F, row.names = F)
